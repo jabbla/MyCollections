@@ -37,6 +37,11 @@ d. 获取主体元素的dom，选择合适的地方将它插入吧
 ifeAlbum.dom
 ```
 
+e. 设置图片间空白距离
+```javascript
+IfeAlbum.setGutter(x,y)//x,y分别是水平距离，和垂直距离
+```
+
 
 
 
