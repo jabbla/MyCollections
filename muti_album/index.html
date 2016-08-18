@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>多功能相册</title>
-    <link rel="stylesheet" href="css/puzzle.css">
-    <link rel="stylesheet" href="css/allScreen.css">
-    <link rel="stylesheet" href="css/falls.css">
-    <link rel="stylesheet" href="css/Barrel.css">
     <style>
         * {
             margin: 0;
@@ -39,16 +35,12 @@
     <button class="waterfall">瀑布布局</button>
     <button class="barrel">木桶布局</button>
 </div>
-<script src="jquery.min.js"></script>
-<script src="myFuncs.js"></script>
-<script src="allScreen.js"></script>
-<script src="ImageAgent.js"></script>
-<script src="puzzle.js"></script>
-<script src="waterfall.js"></script>
-<script src="Barrel.js"></script>
-<script src="IfeAlbum.js"></script>
+<script src="./dist/jquery.min.js"></script>
+<script src="./dist/myFuncs.js"></script>
+<script src="./dist/IfeAlbum.js"></script>
 <script>
     (function(){
+        var path = './images/';
         var aButton = document.querySelectorAll('button');
         var oInput =  document.querySelector('.input');
         var imgs = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg',
@@ -56,6 +48,17 @@
         var map = {
             puzzle:1,waterfall:2,barrel:3
         }
+
+        imgs.forEach(function(item,index,array){
+            array[index] = path+item;
+        });
+    
+
+        ifeAlbum.setLayout(1);
+        ifeAlbum.init('900px','400px');
+        ifeAlbum.setImage(imgs.slice(0,6));
+        ifeAlbum.enableFullscreen();
+        document.body.appendChild(ifeAlbum.dom);
         Array.prototype.slice.call(aButton,0).forEach(function(item){
             item.onclick = function(){
                 if(ifeAlbum.dom){
@@ -64,7 +67,7 @@
                 }
                 var index = map[this.className];
                 var num = (oInput.value.trim()!=='')? parseInt(oInput.value):20 ;
-
+            
                 ifeAlbum.setLayout(index);
                 ifeAlbum.init('900px','400px');
                 if(index===1&&num>6){
@@ -74,10 +77,6 @@
                 }
                 ifeAlbum.enableFullscreen();
                 document.body.appendChild(ifeAlbum.dom);
-
-
-
-
             }
         });
     })();

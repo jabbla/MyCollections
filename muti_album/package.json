@@ -1,0 +1,15 @@
+{
+  "name": "muti_album",
+  "version": "1.0.0",
+  "description": "a. 设置布局\r > ifeAlbum.setLayout(flag)\r flag:1----拼图布局，2----瀑布布局，3----木桶布局",
+  "main": "IfeAlbum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zxr",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0"
+  }
+}

@@ -1,0 +1,7 @@
+.img-wraper {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; }
+  .img-wraper:hover {
+    transform: scale(1.1); }
+
+/*# sourceMappingURL=puzzle.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,WAAY;EACX,MAAM,EAAE,OAAO;EACf,UAAU,EAAE,0BAA0B;EACtC,iBAAQ;IACP,SAAS,EAAE,UAAU",
+"sources": ["../../source/scss/puzzle.scss"],
+"names": [],
+"file": "puzzle.css"
+}

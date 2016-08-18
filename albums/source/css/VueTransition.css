@@ -1,0 +1,19 @@
+.fade-transition {
+  opacity: 1;
+  transition: all 0.2s ease-in-out; }
+
+.fade-enter,
+.fade-leave {
+  opacity: 0; }
+
+.staggered-transition {
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  animation-name: pulse;
+  animation-duration: .75s; }
+
+.staggered-enter,
+.staggered-leave {
+  opacity: 0; }
+
+/*# sourceMappingURL=VueTransition.css.map */

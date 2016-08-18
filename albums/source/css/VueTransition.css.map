@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EAChB,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,oBAAoB;;AAEjC;WACY;EACX,OAAO,EAAE,CAAC;;AAGX,qBAAsB;EACrB,UAAU,EAAE,oBAAoB;EAChC,OAAO,EAAE,CAAC;EACV,cAAc,EAAE,KAAK;EACrB,kBAAkB,EAAE,IAAI;;AAEzB;gBACiB;EAChB,OAAO,EAAE,CAAC",
+"sources": ["VueTransition.scss"],
+"names": [],
+"file": "VueTransition.css"
+}

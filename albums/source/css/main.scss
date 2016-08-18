@@ -1,0 +1,126 @@
+
+$global-font:'Helvetica Neue', 'Hiragino Sans GB', 'Segoe UI', 'Microsoft Yahei',微软雅黑, Tahoma, Arial,STHeiti,sans-serif;
+$global-color:white;
+$wraper-width: 250px;
+$wraper-height: 250px;
+$blue: #3498DB;
+@mixin clear-float {
+	content: '';
+		width: 0;
+		height: 0;
+		display: block;
+		clear: both;
+}
+@mixin wraper-box-style {
+	border: 10px solid $blue;
+	background-color: $blue;
+	border-radius: 50%;
+	box-shadow: 0 0 1em rgba(255,255,255,0.5);
+}
+@mixin abs-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+body,html {
+	width: 100%;
+	height: 100%;
+	font-family: $global-font;
+	color: $global-color;
+	
+}
+.container {
+	top:0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/background.jpg');
+	background-size: cover;
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		background-color: rgba(0,0,0,0.5);
+	}
+	.list-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.global-title {
+	color: white;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	letter-spacing: 5px;
+}
+.list {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	.list-content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+	}
+}
+.list-item {
+	width: $wraper-width;
+	height: $wraper-height;
+}
+.list-item-wraper {
+	@include wraper-box-style;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: white;
+	transition: all 0.2s ease-in-out;
+	overflow: hidden;
+	cursor: pointer;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	border: 5px solid white;
+	z-index: 1;
+	.list-item-name {
+		display: inline-block;
+		font-size: 20px;
+	}
+	&:hover {
+		color: black;
+		background-color: white;
+		animation-name: rubberBand;
+		animation-duration: .75s;
+	}
+	
+}
+.list-item-wraper-hover {
+	border: 10px solid $blue ;
+	&::before {
+		content:'DEMO';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		text-align: center;
+		line-height: $wraper-height - 20px;
+		transition: all 0.2s ease-in-out;
+		font-size: 20px;
+	}
+}

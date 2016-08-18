@@ -1,0 +1,98 @@
+@charset "UTF-8";
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", 微软雅黑, Tahoma, Arial, STHeiti, sans-serif;
+  color: white; }
+
+.container {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background.jpg");
+  background-size: cover; }
+  .container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .container .list-content {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.global-title {
+  color: white;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  letter-spacing: 5px; }
+
+.list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .list .list-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center; }
+
+.list-item {
+  width: 250px;
+  height: 250px; }
+
+.list-item-wraper {
+  border: 10px solid #3498DB;
+  background-color: #3498DB;
+  border-radius: 50%;
+  box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid white;
+  z-index: 1; }
+  .list-item-wraper .list-item-name {
+    display: inline-block;
+    font-size: 20px; }
+  .list-item-wraper:hover {
+    color: black;
+    background-color: white;
+    animation-name: rubberBand;
+    animation-duration: .75s; }
+
+.list-item-wraper-hover {
+  border: 10px solid #3498DB; }
+  .list-item-wraper-hover::before {
+    content: 'DEMO';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    line-height: 230px;
+    transition: all 0.2s ease-in-out;
+    font-size: 20px; }
+
+/*# sourceMappingURL=main.css.map */

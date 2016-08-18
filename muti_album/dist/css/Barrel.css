@@ -1,0 +1,7 @@
+.Barrel-img {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; }
+  .Barrel-img:hover {
+    transform: scale(1.1); }
+
+/*# sourceMappingURL=Barrel.css.map */
