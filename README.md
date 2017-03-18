@@ -1,4 +1,4 @@
-#文件导航
+# 文件导航
 [demo导航][1]
 
 ----------
@@ -19,7 +19,7 @@
 
 
 
-  [1]: http://115.159.180.65:3000/MyCollections/
+  [1]: http://blog.zxrcool.com/MyCollections/
   [2]: https://github.com/jabbla/MyCollections/tree/master/avators
   [3]: https://github.com/jabbla/MyCollections/tree/master/command_block
   [4]: https://github.com/jabbla/MyCollections/tree/master/files_tree
